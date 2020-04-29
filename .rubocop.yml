@@ -1,0 +1,45 @@
+require: rubocop-rails
+
+AllCops:
+  DisabledByDefault: true
+
+Layout/ArrayAlignment:
+  Enabled: true
+
+Layout/HashAlignment:
+  Enabled: true
+
+Layout/ParameterAlignment:
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - db/seeds.rb
+    - db/schema.rb
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - db/schema.rb
+    - db/seeds.rb
+    - db/migrations/*.rb
+    - spec/**/*.rb
+    - config/environments/production.rb
+    # - db/fixtures/*.rb
+
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*.rb
